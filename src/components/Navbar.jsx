@@ -33,20 +33,19 @@ function Navbar(){
     return (
         <>
             <nav className={`flex w-full fixed top-0 z-50 h-16 items-center justify-between px-6 md:px-10 transition-all duration-300 ${scrolled ? "bg-white shadow-md" : "bg-black/50"}`}>
-                {/* Logo */}
+
                 <div className="flex items-center gap-3">
                     <img src={icon2} className={`w-10 h-10 ${scrolled ? "" : "invert"}`} alt="VoyageStay" />
                     <span className={`text-xl font-semibold ${textColor}`}>VoyageStay</span>
                 </div>
 
-                {/* Desktop Links */}
+
                 <div className="hidden md:flex items-center gap-8">
                     {navLinks.map(({ label, href }) => (
-                        <a key={label} href={href} className={`${textColor} hover:opacity-70 transition-opacity`}>{label}</a>
+                        <a key={label} onClick={()=> navigate(href)} className={`${textColor} hover:opacity-70 transition-opacity`}>{label}</a>
                     ))}
                 </div>
 
-                {/* Desktop Actions */}
                 <div className="hidden md:flex items-center gap-4">
                     <CiSearch className={`w-6 h-6 ${textColor}`} />
                     <button
@@ -57,7 +56,6 @@ function Navbar(){
                     </button>
                 </div>
 
-                {/* Mobile: Search + Hamburger */}
                 <div className="flex md:hidden items-center gap-4">
                     <CiSearch className={`w-6 h-6 ${textColor}`} />
                     <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
@@ -69,7 +67,7 @@ function Navbar(){
                 </div>
             </nav>
 
-            {/* Mobile Drawer */}
+
             <div className={`fixed inset-0 z-40 bg-white flex flex-col pt-20 px-8 transition-transform duration-300 md:hidden ${menuOpen ? "translate-x-0" : "translate-x-full"}`}>
                 <nav className="flex flex-col gap-6 mt-4">
                     {navLinks.map(({ label, href }) => (
