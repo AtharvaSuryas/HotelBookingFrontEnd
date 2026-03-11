@@ -42,7 +42,7 @@ function Navbar(){
                 {/* Desktop Links */}
                 <div className="hidden md:flex items-center gap-8">
                     {navLinks.map(({ label, href }) => (
-                        <a key={label} href={href} className={`${textColor} hover:opacity-70 transition-opacity`}>{label}</a>
+                        <a key={label} onClick={()=> navigate(href)} className={`${textColor} hover:opacity-70 transition-opacity`}>{label}</a>
                     ))}
                 </div>
 
