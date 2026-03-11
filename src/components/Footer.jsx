@@ -45,9 +45,9 @@ function Footer(){
                         <h2 className="font-semibold text-gray-900 mb-5">EXPLORE</h2>
                         <ul className="text-sm text-gray-500 space-y-2 list-none">
                             <li><a href="/">Home</a></li>
-                            <li><a href="/hotel">Hotels</a></li>
-                            <li><a href="/experience">Experiences</a></li>
-                            <li><a href="/about">About</a></li>
+                            <li><a onClick={() => navigate('/hotel')}>Hotels</a></li>
+                            <li><a onClick={() => navigate('/experience')}>Experiences</a></li>
+                            <li><a onClick={() => navigate('/about')}>About</a></li>
                         </ul>
                     </div>
                 </div>
