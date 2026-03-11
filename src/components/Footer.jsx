@@ -3,6 +3,7 @@ import icon2 from '../assets/iconNav.png';
 import { FaXTwitter, FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa6";
 
 function Footer(){
+     const navigate = useNavigate();
     return(
         <footer className="px-6 md:px-16 lg:px-24 xl:px-32 w-full bg-gray-50">
             <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30">
