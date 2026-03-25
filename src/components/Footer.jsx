@@ -1,4 +1,5 @@
 import icon2 from '../assets/iconNav.png';
+import { useNavigate } from "react-router-dom";
 import { FaXTwitter, FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa6";
 
 function Footer(){
