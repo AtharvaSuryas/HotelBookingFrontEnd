@@ -33,12 +33,10 @@ function Navbar(){
     return (
         <>
             <nav className={`flex w-full fixed top-0 z-50 h-16 items-center justify-between px-6 md:px-10 transition-all duration-300 ${scrolled ? "bg-white shadow-md" : "bg-black/50"}`}>
-
                 <div className="flex items-center gap-3">
                     <img src={icon2} className={`w-10 h-10 ${scrolled ? "" : "invert"}`} alt="VoyageStay" />
                     <span className={`text-xl font-semibold ${textColor}`}>VoyageStay</span>
                 </div>
-
 
                 <div className="hidden md:flex items-center gap-8">
                     {navLinks.map(({ label, href }) => (
@@ -66,7 +64,6 @@ function Navbar(){
                     </button>
                 </div>
             </nav>
-
 
             <div className={`fixed inset-0 z-40 bg-white flex flex-col pt-20 px-8 transition-transform duration-300 md:hidden ${menuOpen ? "translate-x-0" : "translate-x-full"}`}>
                 <nav className="flex flex-col gap-6 mt-4">
