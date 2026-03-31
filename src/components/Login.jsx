@@ -20,8 +20,6 @@ function Login() {
             password
         }
         loginUser(data)
-
-
     };
 
     return (
